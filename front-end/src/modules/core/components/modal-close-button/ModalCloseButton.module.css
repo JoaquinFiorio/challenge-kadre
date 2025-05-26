@@ -1,0 +1,22 @@
+.container {
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: .5rem;
+    z-index: 10000;
+    font-size: 1.5rem;
+    border-radius: 100%;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: .25s;
+    color: white;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+.container:active {
+    transform: scale(.95);
+}

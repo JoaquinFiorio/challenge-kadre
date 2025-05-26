@@ -1,0 +1,10 @@
+.container {
+    padding: 1rem;
+    background-color: white;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+}

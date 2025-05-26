@@ -1,0 +1,68 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+}
+
+.imageSection {
+    display: none;
+}
+
+.formSection {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.formContainer {
+    width: 100%;
+}
+
+.miniTitle {
+    color: var(--primary-color);
+    font-size: var(--font-size-3);
+    font-family: var(--font-family-extra-bold);
+    line-height: 2;
+    text-transform: uppercase;
+    max-width: 20rem;
+}
+
+.loginText {
+    color: var(--gray-color);
+    font-size: var(--font-size-6);
+    font-family: var(--font-family-bold);
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .formContainer {
+        max-width: 30rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .imageSection {
+        display: flex;
+        background-color: var(--white-color);
+        height: 100%;
+        width: 50%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        width: 20rem;
+        height: 20rem;
+        filter: drop-shadow(0 0 1rem var(--white-color-2));
+        object-fit: contain;
+    }
+
+    .formSection {
+        width: 50%;
+    }
+}

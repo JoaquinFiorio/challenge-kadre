@@ -1,0 +1,10 @@
+.container {
+    max-width: 70%;
+}
+
+.title {
+    font-size: var(--font-size-4);
+    font-family: var(--font-family-extra-bold);
+    color: var(--primary-color);
+    text-transform: uppercase;
+}

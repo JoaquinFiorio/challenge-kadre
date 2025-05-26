@@ -1,0 +1,10 @@
+.container {
+    margin-top: .25rem;
+}
+
+.info {
+    font-size: var(--font-size-4);
+    font-family: var(--font-family-medium);
+    color: var(--gray-color);
+    opacity: .75;
+}

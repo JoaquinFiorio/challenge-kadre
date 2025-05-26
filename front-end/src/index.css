@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-color: #131A20;
+    --loginButton: #4CAF50;
+    --secondary-color: rgb(12, 10, 25);
+    --ghost-white-color: rgba(189, 186, 186, 0.525);
+    --white-color: rgba(255, 255, 255, 1);
+    --white-color-2: rgb(250, 250, 250);
+    --black-color: rgb(50, 50, 50);
+    --black-color-2: rgba(60, 60, 60, 1);
+    --gray-color: rgba(125, 125, 125, 1);
+    --border-color-1: #87878777;
+    --dark-blue: #070612;
+    --font-size-1: .5rem;
+    --font-size-2: .65rem;
+    --font-size-3: .8rem;
+    --font-size-4: .95rem;
+    --font-size-5: 1.1rem;
+    --font-size-6: 1.25rem;
+    --font-size-7: 1.4rem;
+    --font-size-8: 1.55rem;
+    --font-size-9: 1.7rem;
+    --font-size-10: 1.85rem;
+    --font-size-11: 2rem;
+    --font-size-12: 2.15rem;
+    --font-size-13: 2.3rem;
+    --font-size-14: 2.45rem;
+    --font-size-15: 2.6rem;
+    --font-size-16: 2.75rem;
+    --font-size-17: 2.9rem;
+    --font-size-18: 3.05rem;
+    --font-size-19: 3.2rem;
+    --font-size-20: 3.35rem;
+    --font-size-21: 3.5rem;
+    --font-size-22: 3.65rem;
+    --font-size-23: 3.8rem;
+    --font-size-24: 3.95rem;
+    --font-size-25: 4.1rem;
+    --font-family-semi-bold-italic: 'Nunito-SemiBoldItalic';
+    --font-family-semi-bold: 'Nunito-SemiBold';
+    --font-family-regular: 'Nunito-Regular';
+    --font-family-medium-italic: 'Nunito-MediumItalic';
+    --font-family-medium: 'Nunito-Medium';
+    --font-family-light: 'Nunito-Light';
+    --font-family-extra-bold-italic: 'Nunito-ExtraBoldItalic';
+    --font-family-extra-bold: 'Nunito-ExtraBold';
+    --font-family-bold-italic: 'Nunito-BoldItalic';
+    --font-family-bold: 'Nunito-Bold';
+    --font-family-black-italic: 'Nunito-BlackItalic';
+    --font-family-black: 'Nunito-Black';
+}
+
+@font-face {
+    font-family: 'Nunito-SemiBoldItalic';
+    src: url('./assets/fonts/Nunito-SemiBoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-SemiBold';
+    src: url('./assets/fonts/Nunito-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: url('./assets/fonts/Nunito-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-MediumItalic';
+    src: url('./assets/fonts/Nunito-MediumItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-Medium';
+    src: url('./assets/fonts/Nunito-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-Light';
+    src: url('./assets/fonts/Nunito-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-ExtraBoldItalic';
+    src: url('./assets/fonts/Nunito-ExtraBoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-ExtraBold';
+    src: url('./assets/fonts/Nunito-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-BoldItalic';
+    src: url('./assets/fonts/Nunito-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-Bold';
+    src: url('./assets/fonts/Nunito-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-BlackItalic';
+    src: url('./assets/fonts/Nunito-BlackItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-Black';
+    src: url('./assets/fonts/Nunito-Black.ttf');
+}
+
+html,
+body {
+    font-family: var(--font-family-medium), system-ui, Nunito, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--white-color-2) !important;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: .25s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+input {
+    font-size: var(--font-size-3) !important;
+    font-family: var(--font-family-bold) !important;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--white-color-2);
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}

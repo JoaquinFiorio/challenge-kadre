@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+}
+
+.text {
+    font-size: var(--font-size-2);
+    font-family: var(--font-family-extra-bold);
+    color: var(--primary-color);
+    text-wrap: nowrap;
+}
+
+.amount {
+    font-size: var(--font-size-3);
+    font-family: var(--font-family-bold);
+    color: var(--primary-color);
+    text-wrap: nowrap;
+}
+
+@media (min-width: 768px) {
+    .text {
+        font-size: var(--font-size-3);
+    }
+
+    .amount {
+        font-size: var(--font-size-4);
+    }
+}

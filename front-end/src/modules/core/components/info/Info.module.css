@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: var(--font-size-4);
+    color: var(--black-color);
+    font-family: var(--font-family-semi-bold);
+}
+
+.message {
+    font-size: var(--font-size-3);
+    color: var(--black-color-2);
+    font-family: var(--font-family-regular);
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 35rem;
+    }
+
+    .title {
+        font-size: var(--font-size-5);
+    }
+
+    .message {
+        font-size: var(--font-size-4);
+    }
+}
