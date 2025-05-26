@@ -7,11 +7,8 @@ import { KeyIcon, ProfileIcon } from '../../../icons';
 import { LoginStructure, RegisterFieldEnvelope } from '../components';
 import { FieldEnvelope } from '../../core/components';
 import { RegisterModal } from '../modals';
-import { useTranslation } from 'react-i18next';
 
 export const Login = () => {
-
-  const { t } = useTranslation();
 
   const { signIn, loadingSignIn } = useContext(AuthContext);
   const [registerModalVisible, setRegisterModalVisible] = useState(false);
