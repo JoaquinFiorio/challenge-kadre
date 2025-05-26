@@ -26,13 +26,13 @@ export const Login = () => {
   return (
     <>
       <LoginStructure
-        miniTitle={t('welcomeTitle')}
-        title={t('loginTitle')}
+        miniTitle='KADRE TE DA LA BIENVENIDA'
+        title="Iniciar sesión"
       >
         <FieldEnvelope>
           <Input
-            label={t('emailLabel')}
-            placeholder={t('emailPlaceholder')}
+            label="Correo electrónico"
+            placeholder="tucorreo@gmail.com"
             variant="underlined"
             color="primary"
             value={form.email}
@@ -42,8 +42,8 @@ export const Login = () => {
         </FieldEnvelope>
         <FieldEnvelope>
           <Input
-            label={t('passwordLabel')}
-            placeholder={t('passwordPlaceholder')}
+            label="Contraseña"
+            placeholder="*********************"
             variant="underlined"
             color="primary"
             value={form.password}
@@ -60,7 +60,7 @@ export const Login = () => {
             size="sm"
             onPress={() => setRegisterModalVisible(true)}
           >
-            {t('noAccount')} <span style={{ color: 'var(--gray-color)', marginLeft: 5, fontFamily: 'var(--font-family-bold)', cursor: 'pointer' }}>{t('register')}</span>
+            ¿No tienes una cuenta? <span style={{ color: 'var(--gray-color)', marginLeft: 5, fontFamily: 'var(--font-family-bold)', cursor: 'pointer' }}>Regístrate</span>
           </Link>
           <Link
             style={{ cursor: 'pointer' }}
@@ -68,7 +68,7 @@ export const Login = () => {
             size="sm"
             onPress={() => console.log('Forgot Password Clicked')}
           >
-            {t('forgotPassword')}
+            ¿Olvidaste tu contraseña?
           </Link>
         </RegisterFieldEnvelope>
         <Button
@@ -80,7 +80,7 @@ export const Login = () => {
           isLoading={loadingSignIn}
           isDisabled={loadingSignIn || !termsAccepted}
         >
-          {t('loginButton')}
+          Ingresar
         </Button>
         <FieldEnvelope>
           <Checkbox
@@ -88,7 +88,7 @@ export const Login = () => {
             onChange={() => setTermsAccepted(!termsAccepted)}
           />
           <span style={{ color: 'var(--gray-color)', fontFamily: 'var(--font-family-semi-bold)' }}>
-            {t('acceptTerms')} <span style={{ color: 'var(--primary-color)', cursor: 'pointer' }}>{t('termsAndConditions')}</span> {t('loginInfo')} <span style={{ color: 'var(--primary-color)', cursor: 'pointer' }}>{t('privacyPolicy')}</span>.
+            Acepto los <span style={{ color: 'var(--primary-color)', cursor: 'pointer' }}>términos y condiciones</span> al iniciar sesión en Kadre.
           </span>
         </FieldEnvelope>
       </LoginStructure>

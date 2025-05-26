@@ -1,11 +1,9 @@
 import { RegisterData } from '../../interfaces';
-import { FieldEnvelope, ModalContainer, ModalContent, ModalInfo, ModalLogo, ModalTitle } from '../../../core/components';
+import { FieldEnvelope, ModalContainer, ModalContent, ModalLogo, ModalTitle } from '../../../core/components';
 import { useProfile } from '../../hooks';
 import { useForm } from '../../../core/hooks';
-import { Button, Input, Select, SelectItem } from '@nextui-org/react';
+import { Button, Input } from '@nextui-org/react';
 import { KeyIcon } from '../../../../icons';
-import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 
 interface Props {
     visible: boolean
@@ -13,70 +11,28 @@ interface Props {
     enableVisible: () => void
 };
 
-const GENRES = [
-    { key: "male", label: "Masculino" },
-    { key: "female", label: "Femenino" },
-];
-
 export const RegisterModal = ({
     visible,
     onClose,
-    enableVisible
 }: Props) => {
 
-    const { t } = useTranslation();
-
     const { registerAnAccount, registering } = useProfile();
-    const [hasJoinedByReferralLink, setHasJoinedByReferralLink] = useState(false);
-    const [isMounted, setIsMounted] = useState(false);
-    const { form, onChange, resetForm, setForm } = useForm<RegisterData>({
+    const { form, onChange, resetForm } = useForm<RegisterData>({
         firstname: '',
         lastname: '',
-        genre: 'male',
         username: '',
         email: '',
         password: '',
-        confirm_password: '',
-        referral: '',
     });
-
-    useEffect(() => {
-        setIsMounted(true);
-
-        return () => {
-            setIsMounted(false);
-        }
-    }, []);
-
-    useEffect(() => {
-        if (isMounted) {
-            const searchParams = new URLSearchParams(location.search);
-            const username = searchParams.get('referral');
-
-            if (username) {
-                setForm({
-                    referral: username,
-                });
-
-                setHasJoinedByReferralLink(true);
-
-                enableVisible();
-            };
-        };
-    }, [isMounted]);
 
     const handleRegister = async () => {
         const formData = { ...form };
-
-        if (!hasJoinedByReferralLink) {
-            delete formData.referral;
-        };
 
         const resp: any = await registerAnAccount(formData);
 
         if (resp?.success) {
             closeModal();
-        };
+        }
     };
 
     const closeModal = () => {
@@ -87,12 +43,12 @@ export const RegisterModal = ({
     return (
         <ModalContainer visible={visible} onCancel={closeModal}>
           <ModalLogo />
-          <ModalTitle>{t("modal_title")}</ModalTitle>
+          <ModalTitle>Regístrate</ModalTitle>
           <ModalContent>
             <FieldEnvelope>
               <Input
-                label={t("firstname_label")}
-                placeholder={t("firstname_placeholder")}
+                label='Primer nombre'
+                placeholder='Primer nombre'
                 variant="underlined"
                 color="primary"
                 value={form.firstname}
@@ -102,8 +58,8 @@ export const RegisterModal = ({
             </FieldEnvelope>
             <FieldEnvelope>
               <Input
-                label={t("lastname_label")}
-                placeholder={t("lastname_placeholder")}
+                label="Primer apellido"
+                placeholder="Primer apellido"
                 variant="underlined"
                 color="primary"
                 value={form.lastname}
@@ -113,8 +69,8 @@ export const RegisterModal = ({
             </FieldEnvelope>
             <FieldEnvelope>
               <Input
-                label={t("username_label")}
-                placeholder={t("username_placeholder")}
+                label="Nombre de usuario"
+                placeholder="Nombre de usuario"
                 variant="underlined"
                 color="primary"
                 value={form.username}
@@ -124,8 +80,8 @@ export const RegisterModal = ({
             </FieldEnvelope>
             <FieldEnvelope>
               <Input
-                label={t("email_label")}
-                placeholder={t("email_placeholder")}
+                label="Correo electrónico"
+                placeholder="tucorreo@gmail.com"
                 variant="underlined"
                 color="primary"
                 value={form.email}
@@ -135,8 +91,8 @@ export const RegisterModal = ({
             </FieldEnvelope>
             <FieldEnvelope>
               <Input
-                label={t("password_label")}
-                placeholder={t("password_placeholder")}
+                label="Nueva contraseña"
+                placeholder="*********************"
                 variant="underlined"
                 color="primary"
                 value={form.password}
@@ -161,7 +117,7 @@ export const RegisterModal = ({
                 !form.password
               }
             >
-              {registering ? t("create_account_button.loading") : t("create_account_button.default")}
+              {registering ? 'Registrando...' : 'Crear cuenta'}
             </Button>
           </ModalContent>
         </ModalContainer>

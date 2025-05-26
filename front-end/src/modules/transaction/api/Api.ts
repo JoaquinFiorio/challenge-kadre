@@ -43,7 +43,7 @@ const createTransportation = (form: Transport) => {
     });
 };
 
-const updateTransportation = (id: number, transport: Transport) => {
+const updateTransportation = (id: string, transport: Transport) => {
     return new Promise((resolve, reject) => {
         API.put('/api/investment/new_investment/' + id, transport)
             .then((response: any) => resolve(response.data))

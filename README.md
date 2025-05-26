@@ -22,7 +22,7 @@ This project is a **technical test** developed with **React & Vite** and **NodeJ
 - TypeScript: A superset of JavaScript that adds static typing to the language.
 
 > [!TIP]
-> This project includes a back-end folder, which contains the server and database deployed at a test link; you can create as many users as you want. Backend link: 
+> This project includes a back-end folder, which contains the server and database deployed at a test link; Backend link: https://challenge-kadre-production.up.railway.app/
 
 > [!NOTE] 
 > If you do not have the appropriate tools to deploy the project locally, you can visit this link: 

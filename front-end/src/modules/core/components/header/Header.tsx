@@ -1,9 +1,5 @@
 import styles from "./Header.module.css";
-import { Button } from "@nextui-org/react";
 import { User } from "../../../auth/interfaces";
-import { CopyIcon } from "../../../../icons";
-import { useToast } from "../../hooks";
-import { useTranslation } from "react-i18next";
 
 interface Props {
   user: User | null
@@ -11,22 +7,10 @@ interface Props {
   setSidebarOpen: (arg: boolean) => void
 };
 
-const APP_URL = import.meta.env.VITE_APP_URL;
-
 export const Header = ({
-  user,
   sidebarOpen,
   setSidebarOpen,
 }: Props) => {
-
-  const { showToast } = useToast();
-
-  const copy = (link: string) => {
-    navigator.clipboard.writeText(link);
-    showToast('Éxito', 'Enlace de referido copiado', 'success');
-  };
-
-  const { t } = useTranslation();
 
   return (
     <header className={styles.header}>

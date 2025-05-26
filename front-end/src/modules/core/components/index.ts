@@ -15,7 +15,6 @@ import { ModalContainer } from "./modal-container/ModalContainer";
 import { ModalTitle } from "./modal-title/ModalTitle";
 import { ModalContent } from "./modal-content/ModalContent";
 import { ModalActions } from "./modal-actions/ModalActions";
-import { ModalInfo } from "./modal-info/ModalInfo";
 import { Info } from "./info/Info";
 import { ModalCloseButton } from "./modal-close-button/ModalCloseButton";
 import { ModalLogo } from "./modal-logo/ModalLogo";
@@ -39,7 +38,6 @@ export {
     ModalTitle,
     ModalContent,
     ModalActions,
-    ModalInfo,
     Info,
     ModalCloseButton,
     ModalLogo,
