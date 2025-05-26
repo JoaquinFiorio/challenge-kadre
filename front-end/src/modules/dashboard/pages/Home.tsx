@@ -1,9 +1,6 @@
 import { StatCard } from "../components";
 import { Padding } from "../../core/components";
 import { BellIcon, TrendingUpIcon } from "../../../icons";
-import '../../../../node_modules/swiper/swiper.css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 import { useTransport } from "../../transaction/hooks";
 import { useEffect, useState } from "react";
 
