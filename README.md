@@ -25,7 +25,7 @@ This project is a **technical test** developed with **React & Vite** and **NodeJ
 > This project includes a back-end folder, which contains the server and database deployed at a test link; Backend link: https://challenge-kadre-production.up.railway.app/
 
 > [!NOTE] 
-> If you do not have the appropriate tools to deploy the project locally, you can visit this link: 
+> If you do not have the appropriate tools to deploy the project locally, you can visit this link: https://challenge-kadre.vercel.app/ 
 
 ## Installation
 
